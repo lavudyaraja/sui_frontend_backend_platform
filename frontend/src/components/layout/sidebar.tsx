@@ -36,7 +36,6 @@ import {
 } from "lucide-react";
 
 import WalletConnection from "@/app/(dashboard)/auth/components/wallet-connection";
-import Logo from "./logo"; // Import the new Logo component
 
 // Navigation configuration
 const navItems = [

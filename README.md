@@ -30,6 +30,7 @@ This project directly addresses the AI x Data track requirements:
 - [Architecture](#architecture)
 - [Technology Stack](#technology-stack)
 - [Project Structure](#project-structure)
+- [Smart Contracts](#smart-contracts)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
@@ -64,6 +65,7 @@ The Sui-DAT platform follows a microservices architecture with the following com
 AI_agent/
 ├── backend/           # FastAPI backend service
 ├── frontend/          # Next.js web interface
+├── contracts/         # Sui Move smart contracts
 └── README.md          # Project documentation
 ```
 
@@ -123,8 +125,40 @@ AI_agent/
 │   │       ├── main-logo.svg    # Legacy logo
 │   │       └── white-logo.svg   # Legacy logo
 │   └── README.md               # Frontend documentation
+├── contracts/                  # Sui Move smart contracts
+│   ├── sui-dat/                # Main contract package
+│   │   ├── sources/            # Move source files
+│   │   ├── Move.toml           # Package configuration
+│   │   ├── README.md           # Contract documentation
+│   │   ├── deploy.sh/bat       # Deployment scripts
+│   │   └── init.sh/bat         # Initialization scripts
+│   └── README.md               # Contracts overview
 └── README.md                   # Project documentation
 ```
+
+## Smart Contracts
+
+The Sui-DAT platform uses Sui Move smart contracts to manage decentralized AI training:
+
+### Contract Modules
+
+1. **Model Module**: Manages AI model versions and training workflow
+2. **Contributor Module**: Handles participant reputation and contribution tracking
+
+### Deployment
+
+```bash
+# Navigate to contracts directory
+cd contracts/sui-dat
+
+# Build contracts
+sui move build
+
+# Deploy contracts
+sui client publish --gas-budget 100000000
+```
+
+For detailed contract documentation, see [contracts/sui-dat/README.md](contracts/sui-dat/README.md).
 
 ## Getting Started
 
