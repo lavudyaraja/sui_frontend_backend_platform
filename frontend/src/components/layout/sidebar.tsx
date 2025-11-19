@@ -34,12 +34,12 @@ import {
   Coins,
   Wallet,
 } from "lucide-react";
-import Image from "next/image";
+
 import WalletConnection from "@/app/dashboard/auth/components/wallet-connection";
 
 // Navigation configuration
 const navItems = [
-  { title: "Overview", url: "/", icon: Home },
+  { title: "Overview", url: "/dashboard", icon: Home },  // ✅ FIXED
   { title: "Training", url: "/dashboard/training", icon: Cpu, badge: "Live" },
   { title: "Model Versions", url: "/dashboard/model", icon: Database },
   { title: "Contributors", url: "/dashboard/contributors", icon: Users },
@@ -58,7 +58,7 @@ export default function AppSidebar() {
   const router = useRouter();
   const pathname = usePathname();
 
-  const [activeUrl, setActiveUrl] = React.useState("/");
+  const [activeUrl, setActiveUrl] = React.useState("/dashboard");  // ✅ FIXED
   const [isDarkMode, setIsDarkMode] = React.useState(false);
   const [notifications, setNotifications] = React.useState(3);
   const [showWalletDropdown, setShowWalletDropdown] = React.useState(false);
@@ -123,14 +123,11 @@ export default function AppSidebar() {
         <div className="flex items-center justify-between px-4 py-3">
           <div className="flex items-center gap-3">
            <div className="">
-                <Image 
+                <img 
                   src="/logos/main-logo.svg" 
                   alt="Sui-DAT Logo" 
-                  width={48}
-                  height={48}
-                  priority
+                  className="h-12 w-12"
                 />
-                {/* <div className="absolute -top-0.5 -right-0.5 h-2 w-2 rounded-full bg-emerald-400 ring-2 ring-white dark:ring-gray-950" /> */}
               </div>
             <div className="flex flex-col">
               <span className="font-semibold text-sm text-gray-900 dark:text-white">
