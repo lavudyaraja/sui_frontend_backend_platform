@@ -12,7 +12,7 @@ export default function AboutPage() {
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
-            <Badge className="mb-4 px-4 py-2 bg-gradient-to-r from-indigo-50 to-purple-50 text-indigo-700 border border-indigo-200">
+            <Badge className="mb-4 px-4 py-2  text-indigo-700 border border-indigo-200">
               <Zap className="h-3.5 w-3.5 mr-2" />
               Walrus Haulout Hackathon
             </Badge>
@@ -259,10 +259,10 @@ export default function AboutPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="h-12 px-8 bg-gradient-to-r from-indigo-600 to-indigo-700 hover:from-indigo-700 hover:to-indigo-800 shadow-sm">
-                <Link href="/marketing/join">Join the Training Network</Link>
+                <Link href="/dashboard/marketing/join">Join the Training Network</Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="h-12 px-8 border-slate-300 hover:bg-slate-50">
-                <Link href="/marketing/pricing">View Contribution Tiers</Link>
+                <Link href="/dashboard/marketing/pricing">View Contribution Tiers</Link>
               </Button>
             </div>
           </div>

@@ -124,7 +124,7 @@ export default function SettingsPage() {
                       <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mt-4">
                         <div className="bg-white rounded-md p-3 border border-gray-200">
                           <p className="text-xs text-gray-600 mb-1">Network</p>
-                          <p className="font-medium text-gray-900">Sui Testnet</p>
+                          <p className="font-medium text-gray-900">Sui Mainnet</p>
                         </div>
                         <div className="bg-white rounded-md p-3 border border-gray-200">
                           <p className="text-xs text-gray-600 mb-1">Storage</p>

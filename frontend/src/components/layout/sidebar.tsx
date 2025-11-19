@@ -34,7 +34,7 @@ import {
   Coins,
   Wallet,
 } from "lucide-react";
-
+import Image from "next/image";
 import WalletConnection from "@/app/dashboard/auth/components/wallet-connection";
 
 // Navigation configuration
@@ -45,8 +45,8 @@ const navItems = [
   { title: "Contributors", url: "/dashboard/contributors", icon: Users },
   { title: "Analytics", url: "/dashboard/analytics", icon: BarChart },
   { title: "Activity", url: "/dashboard/activity", icon: Activity, badge: "" },
-  { title: "Marketing", url: "/marketing", icon: Map, badge: "" },
-  { title: "Wallet", url: "/wallet", icon: Wallet, badge: "" },
+  { title: "Marketing", url: "/dashboard/marketing", icon: Map, badge: "" },
+  { title: "Wallet", url: "/dashboard/wallet", icon: Wallet, badge: "" },
 ];
 
 const secondaryItems = [
@@ -58,7 +58,7 @@ export default function AppSidebar() {
   const router = useRouter();
   const pathname = usePathname();
 
-  const [activeUrl, setActiveUrl] = React.useState("/dashboard");
+  const [activeUrl, setActiveUrl] = React.useState("/");
   const [isDarkMode, setIsDarkMode] = React.useState(false);
   const [notifications, setNotifications] = React.useState(3);
   const [showWalletDropdown, setShowWalletDropdown] = React.useState(false);
@@ -123,10 +123,12 @@ export default function AppSidebar() {
         <div className="flex items-center justify-between px-4 py-3">
           <div className="flex items-center gap-3">
            <div className="">
-                <img 
+                <Image 
                   src="/logos/main-logo.svg" 
                   alt="Sui-DAT Logo" 
-                  className="h-12 w-12"
+                  width={48}
+                  height={48}
+                  priority
                 />
                 {/* <div className="absolute -top-0.5 -right-0.5 h-2 w-2 rounded-full bg-emerald-400 ring-2 ring-white dark:ring-gray-950" /> */}
               </div>

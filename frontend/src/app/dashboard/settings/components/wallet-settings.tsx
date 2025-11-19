@@ -124,7 +124,7 @@ export default function WalletSettings() {
             </Label>
             <div className="flex items-center gap-2">
               <Input 
-                value="Sui Testnet" 
+                value="Sui Mainnet" 
                 readOnly 
                 className="bg-gray-50 border-gray-200"
               />
