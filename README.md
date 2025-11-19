@@ -1,7 +1,7 @@
 # Sui-DAT: Decentralized AI Training Platform
 
 <div align="center">
-  <img src="frontend/public/logos/sui-dat-logo.svg" alt="Sui-DAT Logo" width="200"/>
+  <img src="frontend/public/logos/main-logo.svg" alt="Sui-DAT Logo" width="200"/>
 </div>
 
 **🏆 Walrus Haulout Hackathon - AI x Data Track**
