@@ -281,9 +281,11 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduc
 
 ## Screenshot Images
 <img width="1910" height="1830" alt="screen-1" src="https://github.com/user-attachments/assets/0afbd59a-0c45-42e3-8903-a7eddd3b47b8" />
-<img width="2040" height="1654" alt="screen-2" src="https://github.com/user-attachments/assets/28bd07cd-eefc-4b9f-92e2-f30ac245660e" />
-<img width="1910" height="2853" alt="screen-3" src="https://github.com/user-attachments/assets/a9cbcee5-4b5d-4bf2-823e-bcd7e5c797e0" />
+<img width="1910" height="1773" alt="screen-13" src="https://github.com/user-attachments/assets/8ddbe562-0fae-4a9a-be38-60c6987b82d3" />
+<img width="1910" height="1678" alt="screen-12" src="https://github.com/user-attachments/assets/035687ac-81f8-4f75-b271-d12f34b516f1" />
 <img width="1910" height="2935" alt="screen-4" src="https://github.com/user-attachments/assets/638583e3-69f3-4523-9581-29851eaaa6e0" />
+<img width="1910" height="1395" alt="acreen-14" src="https://github.com/user-attachments/assets/c636e1a8-63ab-4524-8041-6705f52b121b" />
+
 
 
 ## License
