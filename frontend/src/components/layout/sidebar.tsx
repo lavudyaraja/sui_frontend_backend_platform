@@ -25,14 +25,13 @@ import {
   BarChart,
   Wrench,
   Bell,
-  Moon,
-  Sun,
   Zap,
   TrendingUp,
   Map,
   Server,
   Coins,
   Wallet,
+  Layers,
 } from "lucide-react";
 
 import WalletConnection from "@/app/dashboard/auth/components/wallet-connection";
@@ -47,6 +46,7 @@ const navItems = [
   { title: "Activity", url: "/dashboard/activity", icon: Activity, badge: "" },
   { title: "Marketing", url: "/dashboard/marketing", icon: Map, badge: "" },
   { title: "Wallet", url: "/dashboard/wallet", icon: Wallet, badge: "" },
+  { title: "Features", url: "/dashboard/features", icon: Layers, badge: "New" },
 ];
 
 const secondaryItems = [
@@ -59,7 +59,6 @@ export default function AppSidebar() {
   const pathname = usePathname();
 
   const [activeUrl, setActiveUrl] = React.useState("/dashboard");  // ✅ FIXED
-  const [isDarkMode, setIsDarkMode] = React.useState(false);
   const [notifications, setNotifications] = React.useState(3);
   const [showWalletDropdown, setShowWalletDropdown] = React.useState(false);
 
@@ -73,25 +72,6 @@ export default function AppSidebar() {
   React.useEffect(() => {
     if (pathname) setActiveUrl(pathname);
   }, [pathname]);
-
-  // Initialize dark mode from system preference
-  React.useEffect(() => {
-    const isDark = document.documentElement.classList.contains("dark") || 
-                   window.matchMedia("(prefers-color-scheme: dark)").matches;
-    setIsDarkMode(isDark);
-    if (isDark) {
-      document.documentElement.classList.add("dark");
-    }
-  }, []);
-
-  // Theme toggle
-  // const toggleDarkMode = React.useCallback(() => {
-  //   setIsDarkMode((prev) => {
-  //     const newMode = !prev;
-  //     document.documentElement.classList.toggle("dark", newMode);
-  //     return newMode;
-  //   });
-  // }, []);
 
   // Navigation handler
   const handleNavClick = React.useCallback(
@@ -140,19 +120,6 @@ export default function AppSidebar() {
           </div>
 
           <div className="flex items-center gap-1">
-            {/* Theme Toggle */}
-            {/* <button
-              onClick={toggleDarkMode}
-              className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-200 active:scale-95"
-              aria-label="Toggle theme"
-            >
-              {isDarkMode ? (
-                <Sun className="h-4 w-4 text-gray-400" />
-              ) : (
-                <Moon className="h-4 w-4 text-gray-600" />
-              )}
-            </button> */}
-
             {/* Notifications */}
             <button
               onClick={handleNotificationClick}
